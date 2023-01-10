@@ -1,0 +1,49 @@
+{
+	"auctions":[
+		{
+			"id": 5,
+			"url":"#",
+			"image":"card_image_3.jpg",
+			"time":"03:18:24",
+			"avatar":"author_avatar.png",
+			"titleAttribution":"Virtual Art",
+			"contacts": "by @wzard",
+			"likesIcon": "auctions_like.svg",
+			"likesAmount": 92,
+			"titleBid": "Current Bid",
+			"crypto": "4.89 ETH",
+			"button": "Place a bid"
+			
+		},
+		{
+			"id": 6,
+			"url":"#",
+			"image":"card_image_2.jpg",
+			"time":"03:18:24",
+			"avatar":"author_avatar.png",
+			"titleAttribution":"Virtual Art",
+			"contacts": "by @wzard",
+			"likesIcon": "auctions_like.svg",
+			"likesAmount": 92,
+			"titleBid": "Current Bid",
+			"crypto": "4.89 ETH",
+			"button": "Place a bid"
+			
+		},
+		{
+			"id": 7,
+			"url":"#",
+			"image":"card_image_1.jpg",
+			"time":"03:18:24",
+			"avatar":"author_avatar.png",
+			"titleAttribution":"Virtual Art",
+			"contacts": "by @wzard",
+			"likesIcon": "auctions_like.svg",
+			"likesAmount": 92,
+			"titleBid": "Current Bid",
+			"crypto": "4.89 ETH",
+			"button": "Place a bid"
+			
+		}
+	]
+}

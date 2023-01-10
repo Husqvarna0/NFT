@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Верстка «Deep»</title>
+	</head>
+	<body>
+		<div class="rootpage">
+			<h1>Верстка «Deep»</h1>
+			<div class="rootpage__info">
+				Верстка проекту для портфоліо
+			</div>
+			<h2>Готові сторінки:</h2>
+			<ol class="rootpage__list">
+				<li><a target="_blank" href="home.html">Головна</a></li>
+			</ol>
+			
+			<div class="rootpage__contacts">
+				<h2>Мої контакти:</h2>
+				<p>Пошта: <a href="mailto:dementiyenkos@gmail.com">dementiyenkos@gmail.com</a></p>
+				<p>Телефон: <a href="tel:+30992286406">+30992286406</a></p>
+				<p>Соц. мережі: <a href="https://www.linkedin.com/in/dementiienko-dmytro-a20462228/">https://www.linkedin.com/in/dementiienko-dmytro-a20462228/</a></p>
+			</div>
+		</div>
+	</body>
+	<style>
+		@charset "UTF-8";
+		@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap");
+		* ,*::before, *::after {
+			padding: 0px;
+			margin: 0px;
+			border: 0px;
+			box-sizing: border-box; 
+		}
+		html, body {
+			min-width: 100%;
+			max-height: 100%;
+			
+			
+		}
+		body {
+			font-family: Montserrat;
+			font-size: 100%;
+			line-height: 1;
+			font-size: 1rem;
+			background: #212534;;
+			display: flex;
+			
+			justify-content: center;
+		}
+		a {
+			text-decoration: underline;
+			color: #ebe691
+		}
+		a:visited {
+			text-decoration: underline;
+			color: #ffffff;
+		}
+			a:hover {
+			text-decoration: none;
+		}
+		ul li {
+			list-style: none;
+		}
+		img {
+			vertical-align: top;
+		}
+		.wrapper {
+			width: 100%;
+			max-height: 100%;
+			overflow: hidden;
+			
+			
+			
+		}
+
+		@property --rotate {
+			syntax: "<angle>";
+			initial-value: 132deg;
+			inherits: false;
+			}
+
+			:root {
+			--rootpage-height: 65vh;
+			--rootpage-width: calc(var(--rootpage-height) / 1.5);
+			}
+
+
+		.rootpage{
+			margin-top: 15%;
+			max-width: 40%;			
+			padding: 20px 0px 20px 0px;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			background: #191c29;			
+			border-radius: 6px;		
+			text-align: center;			
+			color: rgb(88 199 250 / 100%);
+			
+
+		}
+
+		
+		.rootpage::before{
+			content: "";
+			width: 102%;
+			height: 103.5%;
+			border-radius: 8px;
+			background-image: linear-gradient(
+				var(--rotate)
+				, #5ddcff, #3c67e3 43%, #4e00c2);
+				position: absolute;
+				z-index: -1;
+				top: -1.7%;
+				left: -1%;
+				animation: spin 2.5s linear infinite;
+		}
+		.rootpage::after{
+			position: absolute;
+			content: "";
+			
+			left: 0;
+			right: 0;
+			z-index: -1;
+			height: 100%;
+			width: 100%;
+			margin: 0 auto;
+			transform: scale(0.8);
+			filter: blur(calc(var(--rootpage-height) / 6));
+			background-image: linear-gradient(
+				var(--rotate)
+				, #5ddcff, #3c67e3 43%, #4e00c2);
+				opacity: 1;
+			transition: opacity .5s;
+			animation: spin 2.5s linear infinite;
+		}
+
+		@keyframes spin {
+		0% {
+			--rotate: 0deg;
+		}
+		100% {
+			--rotate: 360deg;
+		}
+		}
+
+		@media (max-width: 767px) {
+			.rootpage{
+				padding:30px 15px;
+			}
+		}
+		h1 {
+			color: #ffffff;
+			font-size: 2.5rem;
+			margin: 0px 0px 1.25rem 0px;
+		}
+		@media (max-width: 767px) {
+			h1 {
+				font-size: 1.85rem;
+				margin: 0px 0px 1.25rem 0px;
+			}
+		}
+		h2 {
+			color: #fdfdfd;
+			font-size: 1.25rem;
+			margin: 0px 0px 1rem 0px;
+		}
+		@media (max-width: 767px) {
+			 h2 {
+				font-size: 1.125rem;
+				margin: 0px 0px 1rem 0px;
+			}
+		}
+		.rootpage__info{
+			line-height: 140%;
+			margin: 0px 0px 1.5rem 0px;
+		}
+
+		.rootpage__list{
+			margin: 0px 0px 2.25rem 1.25rem;
+		}
+		.rootpage__list li:not(:last-child){
+			margin: 0px 0px 15px 0px;
+		}
+		.rootpage__contacts,
+		.rootpage__tnx{
+			border-radius: 200px;
+			padding: 20px 65px;
+			line-height: 140%;
+		}
+		@media (max-width: 767px){
+		.rootpage__contacts,
+		.rootpage__tnx{
+			border-radius:40px;
+			padding: 20px;
+		}
+		}
+		.rootpage__contacts{
+			
+			
+		}
+		.rootpage__contacts a{
+			color: #fcfcfc;
+		}
+		
+	</style>
+</html>
