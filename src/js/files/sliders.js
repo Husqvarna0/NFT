@@ -40,7 +40,7 @@ function initSliders() {
 			//autoHeight: true,
 			speed: 800,
 
-			//touchRatio: 0,
+			//touchRatio: 0, auctions__slider collections__slide
 			//simulateTouch: false,
 			//loop: true,
 			//preloadImages: false,
@@ -66,7 +66,7 @@ function initSliders() {
 			// Скроллбар
 			/*
 			scrollbar: {
-				el: '.swiper-scrollbar',
+				el: '.swiper-scrollbar',r
 				draggable: true,
 			},
 			*/
@@ -108,8 +108,95 @@ function initSliders() {
 
 			}
 		});
+	};
+	if (document.querySelector('.collections__slider')) { // Указываем скласс нужного слайдера
+		// Создаем слайдер
+		new Swiper('.collections__slider', { // Указываем скласс нужного слайдера
+			// Подключаем модули слайдера
+			// для конкретного случая
+			modules: [Navigation],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 3.4,
+			spaceBetween: 36,
+			
+			initialSlide: 1,
+			centeredSlides: true,
+			//autoHeight: true,
+			speed: 800,
+			
+
+			//touchRatio: 0,
+			//simulateTouch: false,
+			
+			//preloadImages: false,
+			//lazy: true,
+
+			/*
+			// Эффекты
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			*/
+
+			// Пагинация
+			/*
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+			*/
+
+			// Скроллбар
+			/*
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+			},
+			*/
+
+			// Кнопки "влево/вправо"
+			navigation: {
+				prevEl: '.collections__swiper-button-prev',
+				nextEl: '.collections__swiper-button-next',
+			},
+
+			// Брейкпоинты
+			
+			/*breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 10,
+					autoHeight: true,
+				},
+				689: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				992: {
+					slidesPerView: 2,
+					spaceBetween: 22,
+				},
+				1268: {
+					slidesPerView: 3,
+					spaceBetween: 42,
+				},
+			},*/
+			
+			// События
+			on: {
+
+			}
+		});
 	}
 }
+
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
 function initSlidersScroll() {
 	let sliderScrollItems = document.querySelectorAll('.swiper_scroll');
