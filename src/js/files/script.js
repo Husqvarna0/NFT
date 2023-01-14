@@ -87,3 +87,10 @@ window.onload = 	function(){
 		});
 	}
 }
+
+function colectionsNavigation(){
+	if(document.querySelector('.collections__swiper-button-next')&document.querySelector('.collections__navigation.swiper-button-disabled')){
+		document.getElementsByClassName(collections__swiper-button-next)[0].style.display = "none";
+		document.getElementsByClassName(collections__swiper-button-prev)[0].style.display = "block";
+	}
+}
