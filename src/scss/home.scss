@@ -1078,13 +1078,11 @@
 
 	&__header {
 		position: relative;
-		z-index: 50;
-		
-		
+		z-index: 50;		
 		justify-content: center;
 		font-family: 'Oxanium';
 		font-style: normal;
-		font-weight: 700;
+		font-weight: 700;		
 		font-size: rem(64);
 		line-height: math.div(130 , 64);
 		align-self: center;
@@ -1101,17 +1099,35 @@
 			z-index: -1;
 			
 		}
+		@media (max-width:$mobile){
+			padding-bottom: rem(80); 
+			font-size: rem(40);
+			
+			
+				&::before{
+					width: rem(70);
+					height: rem(70);
+					top: rem(3);
+					left: rem(-15);
+				}
+
+	  }
 	}
 	&__content{
 		position: relative;
 		display: flex;
 		z-index: 50;
-		padding-top: rem(106);
+		@include adaptiveValue("padding-top", 106, 50);
+		
 		padding-bottom: rem(84);
+		
 		
 	}
 	&__slider {
+		@media (max-width:$tablet){
 			
+		}
+
 		min-width: 0;
 	}
 
@@ -1121,7 +1137,13 @@
 
 	&__slide {
 		transition: all 0.3s ease 0s;
-		min-width: rem(525);	
+		min-width: rem(525);
+		@media (max-width: em(1268)){
+			min-width: 0;		
+
+		}
+		
+		
 	}
 
 	&__card {
@@ -1129,6 +1151,9 @@
 		display: flex;
       flex-direction: column;
 		background-color: rgba(61, 41, 66, 0.8);
+		@media (max-width: em(1268)){
+			padding: rem(15);
+		}
 	}
 
 	&__navigation {
@@ -1169,6 +1194,10 @@
 .collections__slide.swiper-slide-next {
 	opacity: 50%;
 	pointer-events: none;
+	@media (max-width: em(1260)){
+		  opacity: 100%;
+		  pointer-events: all;
+	}
 }
 .swiper {
 	
@@ -1180,7 +1209,23 @@
 }
 .card-collections {
 
+
 	&__image {
+		flex-shrink: 0;
+		position: relative;
+		@media (max-width: em(1085)){
+			  
+		}
+		img{
+			
+			
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		
 	}
 
 	&__attribution {
@@ -1195,15 +1240,22 @@
 	&__author {
 		display: flex;
 		align-items: center;
+		@include adaptiveValue("gap", 16, 10);
 		gap: rem(16);
 	}
 
 	&__avatar {
+		
+		img{
+			width: 100%;
+			height: 100%;
+		}
 	}
 
 	&__contacts {
+		@include adaptiveValue("font-size", 32, 20);
 		font-weight: 500;
-		font-size: rem(32);
+		
 		line-height: math.div(36 , 32);
 		color: #F5FBF2;
 	}
@@ -1211,6 +1263,7 @@
 	&__description {		
 		font-weight: 600;
 		font-size: rem(20);
+		@include adaptiveValue("font-size", 20, 15);
 		line-height: math.div(35 , 20);
 		color: #C2B5C6;
 	}
@@ -1230,6 +1283,7 @@
 	background-color: #251928;
 	position: relative;
 	padding: rem(80) rem(0);
+	
 
 	&__container {
 		display: flex;
@@ -1260,6 +1314,19 @@
 			z-index: -1;
 			
 		}
+		@media (max-width:$mobile){
+			padding-bottom: rem(40); 
+			font-size: rem(34);
+			
+			
+				&::before{
+					width: rem(70);
+					height: rem(70);
+					top: rem(0);
+					left: rem(-20);
+				}
+
+	  }
 	}
 
 	&__content {
@@ -1285,6 +1352,10 @@
 		opacity: 50%;
 		pointer-events: none;
 		transition: all 0.3s ease 0s;
+		@media (max-width:$mobile){
+			min-width: 0;
+			max-width: none;
+		}
 	}
 
 	&__card {
@@ -1292,6 +1363,9 @@
 		flex-direction: column;
 		padding: rem(32) rem(32) rem(28) rem(32);
 		background: #3D2942;
+		@media (max-width:$mobile){
+			padding: rem(15); 
+		}
 		
 	}
 	&__all{
@@ -1402,7 +1476,8 @@
 	justify-content: space-between;
 	&__author {
 		display: flex;
-		gap: rem(12);
+		@include adaptiveValue("gap", 12, 6);
+		
 	}
 
 	&__avatar {
@@ -1414,10 +1489,11 @@
 	&__title {
 		font-weight: 500;
 		font-size: 24px;
+		
 		line-height: math.div(35 , 24);		
 		color: #F5FBF2;
 		@media (max-width: em(1267.99)){
-			font-size: 20px;
+			font-size: 18px;
 		}
 	}
 
@@ -1427,13 +1503,14 @@
 			line-height: math.div(35 , 18);			
 			color: #BDAAC1;
 			@media (max-width: em(1267.99)){
-				font-size: 16px;
+				font-size: 14px;
 			}
 	}
 }
 .info-card-categories {
 
 	&__likes {
+		
 	}
 }
 .likes-info-card-categories {
@@ -1443,7 +1520,8 @@
 	&__icon {
 		
 		&:not(:last-child) {
-			padding-right: rem(9);
+			@include adaptiveValue("padding-right", 9, 4);
+			
 	  }
 	
 	}

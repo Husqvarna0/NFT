@@ -165,29 +165,39 @@ function initSliders() {
 
 			// Брейкпоинты
 			
-			/*breakpoints: {
+			breakpoints: {
 				320: {
 					slidesPerView: 1,
-					spaceBetween: 10,
-					autoHeight: true,
+					spaceBetween: 20,
+					initialSlide: 0,
+					centeredSlides: false,
+					
 				},
 				689: {
 					slidesPerView: 2,
 					spaceBetween: 20,
+					initialSlide: 0,
+					centeredSlides: false,
 				},
 				768: {
 					slidesPerView: 2,
 					spaceBetween: 20,
+					initialSlide: 0,
+					centeredSlides: false,
 				},
 				992: {
 					slidesPerView: 2,
 					spaceBetween: 22,
+
+					initialSlide: 0,
+					centeredSlides: false,
 				},
 				1268: {
-					slidesPerView: 3,
-					spaceBetween: 42,
+					slidesPerView: 3.6,
+					spaceBetween: 36,
+					
 				},
-			},*/
+			},
 			
 			// События
 			on: {
@@ -254,29 +264,37 @@ function initSliders() {
 
 			// Брейкпоинты
 			
-		/*	breakpoints: {
+			breakpoints: {
 				320: {
 					slidesPerView: 1,
 					spaceBetween: 10,
-					autoHeight: true,
+					initialSlide: 0,
+					centeredSlides: false,
+				
 				},
 				689: {
 					slidesPerView: 2,
-					spaceBetween: 20,
+					spaceBetween: 20,	
+					initialSlide: 0,
+					centeredSlides: false,
 				},
 				768: {
 					slidesPerView: 2,
-					spaceBetween: 20,
+					spaceBetween: 30,
+					initialSlide: 0,
+					centeredSlides: false,
 				},
 				992: {
-					slidesPerView: 2,
-					spaceBetween: 22,
+					slidesPerView: 3,
+					spaceBetween: 42,
+					
 				},
 				1268: {
 					slidesPerView: 3,
 					spaceBetween: 42,
+				
 				},
-			},*/
+			},
 			
 			// События
 			on: {
