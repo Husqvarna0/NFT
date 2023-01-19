@@ -1,3 +1,137 @@
 //====================================================================================================
 
+.footer {
+	background-color: #251928;
+	padding: rem(108) rem(0) rem(110) rem(0);
+	&__container {
+		
+	}
+
+	&__row {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+
+		@media (max-width:$mobile){
+			display: flex;
+			flex-direction: column-reverse;
+			gap: rem(90);
+			align-items: center;
+			
+		}
+	}
+
+	&__column {
+		display: flex;
+		
+	}
+
+	&__icon {
+		@include adaptiveValue("width", 195, 70);
+		@include adaptiveValue("height", 195, 70);
+		position: relative;
+		flex-shrink: 0;
+		img{
+			z-index: 50;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+
+		}
+	}
+
+	&__social {
+
+	}
+
+	&__menu {
+		&:not(:last-child) {
+			@include adaptiveValue("padding-left", 114, 10);
+			@include adaptiveValue("padding-right", 227, 20);
+
+			
+
+			@media (max-width:$tablet){
+				padding-left: rem(40);
+				padding-right: rem(40);
+			}
+			@media (max-width:$mobile){
+				padding-left: rem(0);
+				padding-right: rem(150);
+			}
+			@media (max-width:$mobileSmall){
+				padding-right: rem(110);
+			}
+		}
+	}
+}
+.social-footer {
+	display: grid;
+	gap: rem(52);
+		
+	@include adaptiveValue("padding-left", 51, 10);
+	@include adaptiveValue("padding-right", 84, 20);
+
+	&__content {
+		font-style: normal;
+		font-weight: 500;
+		@include adaptiveValue("font-size", 20, 14);
+		line-height: math.div(36 , 20);
+		color: #96839B;
+	}
+
+	&__icons {
+		display: flex;
+		gap: rem(28);
+
+	}
+
+	&__icon {
+	}
+
+	&__copyright {
+		font-style: normal;
+		font-weight: 400;
+		@include adaptiveValue("font-size", 20, 14);
+		line-height: math.div(36 , 20);
+		color: #96839B;
+	}
+}
+.menu-footer {
+	display: grid;
+
+
+
+	&__label {
+		font-style: normal;
+		font-weight: 700;
+		@include adaptiveValue("font-size", 24, 16);
+		line-height: math.div(35 , 24);
+
+	}
+
+	&__list {
+		padding-top: rem(18);
+		gap: rem(28);
+	}
+
+	&__item {
+		font-weight: 500;
+		@include adaptiveValue("font-size", 20, 14);
+		line-height: math.div(50 , 20);
+		color: #96839B;
+		
+	}
+	&__link{
+		@media (any-hover: hover){
+			transition: all 0.3s ease 0s;
+			&:hover{
+				color: #E7B226;
+			}
+		}
+	}
+}
+
 //====================================================================================================

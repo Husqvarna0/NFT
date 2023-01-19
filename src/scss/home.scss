@@ -1584,6 +1584,7 @@
 
 .creators {
   padding: rem(104) rem(0) rem(80) rem(0);
+
 	&__container {
 		display: flex;
 		flex-direction: column;
@@ -1634,10 +1635,11 @@
 	&__content {
 		@include adaptiveValue("padding-top", 80, 40);
 		@include adaptiveValue("padding-bottom", 80, 40);
-		display: grid;
-		 
+
+		display: grid;		 
 		justify-content: center;
 		grid-template-columns: fit-content(50%) fit-content(50%);
+
 		@include adaptiveValue("column-gap", 72, 10);
 		@include adaptiveValue("row-gap", 56, 5);
 		
@@ -1688,7 +1690,9 @@
 		position: relative;
 		img{
 			position: absolute;
-			top: 0;left: 0;height: 100%;
+			top: 0;
+			left: 0;
+			height: 100%;
 			width: 100%;
 		}
 		@include adaptiveValue("height", 104, 45);
@@ -1746,4 +1750,84 @@
 		line-height: math.div(36 , 24);		
 		color: #908294;
 	}
+}
+
+
+//========================================================================================================================================================
+
+.subscribe {
+	padding: rem(117) rem(0) ;
+	position: relative;
+	
+		&__container {
+			position: relative;
+			z-index: 50;
+			display: grid;
+			place-items: center;
+		}
+
+		&__header {
+			font-family: 'Oxanium';
+			
+			font-weight: 700;
+			@include adaptiveValue("font-size", 64, 30);			
+			line-height: math.div(130 , 64);			
+			color: #F5FBF2;
+			padding-bottom: rem(24);
+		}
+
+		&__form {
+
+		}
+
+		&__lights {
+			position: absolute;
+			z-index: 5;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(179.78deg, #1C121F 9.98%, rgba(28, 18, 31, 0.21) 81.39%), url('img/subscribe/subscribe-background.png');
+			background-blend-mode: normal, color-dodge;
+			
+			opacity: 0.5;
+		}
+}
+.form-subscribe {
+	display: flex;
+
+	@media (max-width:$mobile){
+		 flex-direction: column; 
+		 gap: rem(20);
+		 @include adaptiveValue("width", 533, 350);
+	}
+
+		&__input {
+			padding: rem(30) rem(195) rem(30) rem(53);			
+			border: 1px solid #FFCE4E;
+			background-color: rgba(0, 0, 0, 0);
+			color: #fff;
+
+			@media (max-width:$mobile){
+				padding: rem(30) rem(105) rem(30) rem(53);	
+			}
+			::placeholder{
+				font-weight: 400;
+				@include adaptiveValue("font-size", 24, 16);
+				line-height: math.div(35, 24);
+				color: #A48EA9;
+				
+				
+			}
+		}
+
+		&__button {
+			font-weight: 700;
+			@include adaptiveValue("font-size", 24, 20);
+			line-height: math.div(35, 24);
+			color: #251928;
+			border: 1px solid #FFCE4E;
+			background: #FFCE4E;
+			padding: rem(30) rem(63) ;
+		}
 }
