@@ -586,7 +586,7 @@
 		
 		justify-content: center;
 		font-family: 'Oxanium';
-		font-style: normal;
+		
 		font-weight: 700;
 		font-size: rem(64);
 		line-height: math.div(130 , 64);
@@ -1577,4 +1577,173 @@
 	}
 }
 .lights-auctions {
+}
+
+
+//========================================================================================================================================================
+
+.creators {
+  padding: rem(104) rem(0) rem(80) rem(0);
+	&__container {
+		display: flex;
+		flex-direction: column;
+		
+	}
+	&__header {
+		position: relative;
+		z-index: 50;
+			
+		
+		align-self: center;
+		font-family: 'Oxanium';
+		
+		font-weight: 700;
+		font-size: rem(64);
+		line-height: math.div(130 , 64);
+		
+		
+		
+			
+			
+			&::before{
+				content:'';
+				width: rem(110);
+				height: rem(110);
+				background-color: #E03054;
+				border-radius: 50%;
+				position: absolute;
+				top: rem(10);
+				left: rem(-40);
+				z-index: -1;
+				
+			}
+			@media (max-width:$mobile){
+				padding-bottom: rem(40); 
+				font-size: rem(34);
+				
+				
+					&::before{
+						width: rem(70);
+						height: rem(70);
+						top: rem(0);
+						left: rem(-20);
+					}
+	
+		  }
+	}
+	&__content {
+		@include adaptiveValue("padding-top", 80, 40);
+		@include adaptiveValue("padding-bottom", 80, 40);
+		display: grid;
+		 
+		justify-content: center;
+		grid-template-columns: fit-content(50%) fit-content(50%);
+		@include adaptiveValue("column-gap", 72, 10);
+		@include adaptiveValue("row-gap", 56, 5);
+		
+		@media (max-width:$mobile){
+			grid-template-columns: 1fr;			
+		}
+		
+			
+	}
+
+	&__all {
+		
+		align-self: center;
+	}
+}
+
+.content-creators {
+
+	&__item {
+		@include adaptiveValue("padding-top", 26, 1);
+		@include adaptiveValue("padding-right", 64, 1);
+		@include adaptiveValue("padding-bottom", 26, 1);
+		@include adaptiveValue("padding-left", 29, 1);		
+		background-color: #302034;
+		@include adaptiveValue("width", 610, 160);
+		display: flex;
+		border-left: 2px solid #E03054;		
+		align-items: center;
+		justify-content: space-between;
+		@media (max-width:$mobile){
+			  width: 100%;
+		}
+		@media (max-width:$mobileSmall){
+			 padding: rem(15) ; 
+		}
+		
+
+	}
+
+	&__author {
+		@include adaptiveValue("gap", 24, 18);
+		display: flex;
+		align-items: center;
+		
+	}
+
+	&__avatar {
+		position: relative;
+		img{
+			position: absolute;
+			top: 0;left: 0;height: 100%;
+			width: 100%;
+		}
+		@include adaptiveValue("height", 104, 45);
+		@include adaptiveValue("width", 104, 45);
+
+	}
+
+	&__description {
+		display: flex;
+		flex-direction: column;
+		gap: rem(8);
+	}
+
+	&__name {
+		font-family: 'Oxanium';
+		font-weight: 600;
+		@include adaptiveValue("font-size", 32, 16);
+		line-height: math.div(35 , 32);
+		letter-spacing: 0.05em;
+		color: #F5FBF2;
+	}
+
+	&__crypto {
+		font-weight: 500;
+		@include adaptiveValue("font-size", 24, 18);
+		line-height: math.div(36 , 24);
+		
+		color: #BDAAC1;
+	}
+
+	&__amount {
+		display: flex;
+		flex-direction: column;
+		gap: rem(6);
+		align-items: center;
+		border-left: 3px solid #49374E;
+		
+		
+		@include adaptiveValue("padding-top", 11.5, 10);
+		@include adaptiveValue("padding-bottom", 11.5, 10);
+		@include adaptiveValue("padding-left", 45, 5);
+
+	}
+	&__number{
+		font-family: 'Oxanium';
+		font-weight: 700;
+		@include adaptiveValue("font-size", 32, 16);
+		line-height: math.div(35 , 32);
+		letter-spacing: 0.05em;
+		color: #F5FBF2;
+	}
+	&__text{
+		font-weight: 500;
+		@include adaptiveValue("font-size", 24, 18);
+		line-height: math.div(36 , 24);		
+		color: #908294;
+	}
 }
