@@ -3,6 +3,7 @@
 .footer {
 	background-color: #251928;
 	padding: rem(108) rem(0) rem(110) rem(0);
+	position: relative;
 	&__container {
 		
 	}
@@ -65,6 +66,8 @@
 				padding-right: rem(110);
 			}
 		}
+	}
+	&__light {
 	}
 }
 .social-footer {
@@ -134,4 +137,29 @@
 	}
 }
 
+.light-footer {
+
+	&__item-1 {
+		top: 0;
+		left: 0;
+		position: absolute;
+		width: 202px;
+		height: 167px;
+		background: #D53D5C;
+		filter: blur(275px);
+	}
+	&__item-2 {
+		top: rem(-230);
+		right: 20%;
+
+		position: absolute;
+		width: 262px;
+		height: 165px;
+		background: #B1D26F;
+		filter: blur(225px);
+	}
+}
+
 //====================================================================================================
+	
+

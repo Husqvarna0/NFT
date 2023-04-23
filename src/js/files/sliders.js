@@ -40,7 +40,7 @@ function initSliders() {
 			//autoHeight: true,
 			speed: 800,
 
-			//touchRatio: 0, auctions__slider collections__slide
+			//touchRatio: 0,
 			//simulateTouch: false,
 			//loop: true,
 			//preloadImages: false,
@@ -117,7 +117,7 @@ function initSliders() {
 			modules: [Navigation],
 			observer: true,
 			observeParents: true,
-			slidesPerView: 3.4,
+			slidesPerView: 3.6,
 			spaceBetween: 36,
 			
 			initialSlide: 1,
@@ -173,7 +173,7 @@ function initSliders() {
 					centeredSlides: false,
 					
 				},
-				689: {
+				620: {
 					slidesPerView: 2,
 					spaceBetween: 20,
 					initialSlide: 0,
@@ -193,7 +193,7 @@ function initSliders() {
 					centeredSlides: false,
 				},
 				1268: {
-					slidesPerView: 3.6,
+					slidesPerView: 3,
 					spaceBetween: 36,
 					
 				},
@@ -272,7 +272,7 @@ function initSliders() {
 					centeredSlides: false,
 				
 				},
-				689: {
+				600: {
 					slidesPerView: 2,
 					spaceBetween: 20,	
 					initialSlide: 0,
